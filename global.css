@@ -3,3 +3,81 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
+
+@import "tailwindcss";
+
+@theme {
+  /* Surface & Background Colors */
+  --color-app-bg: #09090b;
+  --color-card-bg: #18181b;
+  --color-card-subtle: #27272a;
+  --color-card-border: #3f3f46;
+
+  /* Neon Accent Palette */
+  --color-neon-lime: #a3e635;
+  --color-neon-cyan: #38bdf8;
+  --color-orange-flame: #f97316;
+  --color-ai-purple: #c084fc;
+
+  /* Typography */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+}
+
+@layer components {
+  /* Card Containers */
+  .card-main {
+    @apply bg-card-bg border border-card-border rounded-3xl p-5;
+  }
+  
+  .card-subtle {
+    @apply bg-card-subtle border border-card-border/60 rounded-2xl p-4;
+  }
+
+  /* Interactive Buttons */
+  .btn-primary {
+    @apply bg-neon-lime rounded-2xl py-3.5 flex-row items-center justify-center gap-2 active:opacity-90;
+  }
+
+  .btn-icon-wrapper {
+    @apply w-10 h-10 rounded-xl bg-card-subtle border border-card-border items-center justify-center;
+  }
+
+  /* Badges & Tags */
+  .badge-lime {
+    @apply bg-neon-lime/10 border border-neon-lime/20 px-3 py-1 rounded-full;
+  }
+
+  .badge-purple {
+    @apply bg-ai-purple/10 border border-ai-purple/30 px-3 py-1 rounded-full;
+  }
+
+  /* Typography Components */
+  .text-heading {
+    @apply text-text-primary text-xl font-bold;
+  }
+
+  .text-subtext {
+    @apply text-text-secondary text-xs;
+  }
+}
+
+@layer utilities {
+  /* React Native Shadow/Glow Utilities */
+  .glow-lime {
+    shadow-color: #a3e635;
+    shadow-offset: 0px 4px;
+    shadow-opacity: 0.35;
+    shadow-radius: 12px;
+    elevation: 8;
+  }
+
+  .glow-purple {
+    shadow-color: #c084fc;
+    shadow-offset: 0px 4px;
+    shadow-opacity: 0.25;
+    shadow-radius: 10px;
+    elevation: 6;
+  }
+}
