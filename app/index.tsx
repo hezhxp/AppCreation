@@ -9,7 +9,7 @@ export default function App() {
         testing GitHub Repo Transfer Yay!
       </Text>
       <Link href="/onboarding" className="mt-4 rounded bg-neon-lime py-3.5 text-text-primary">
-        Go to onboarding
+        Kinda just learning
       </Link>
     </View>
   );
