@@ -1,6 +1,12 @@
 import "@/global.css";
+import { drizzle } from 'drizzle-orm/expo-sqlite';
 import { Link } from "expo-router";
+import * as SQLite from 'expo-sqlite';
 import { Text, View } from "react-native";
+
+const expo = SQLite.openDatabaseSync('db.db');
+
+const db = drizzle(expo);
 
 export default function App() {
   return (

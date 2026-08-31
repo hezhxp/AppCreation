@@ -6,3 +6,5 @@ const { withNativewind } = require("nativewind/metro");
 const config = getDefaultConfig(__dirname);
 
 module.exports = withNativewind(config);
+config.resolver.sourceExts.push('sql');
+module.exports = config;
