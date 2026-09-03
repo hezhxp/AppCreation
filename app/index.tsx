@@ -14,7 +14,7 @@ export default function App() {
   return (
     <View className="flex-1 items-center justify-center bg-app-bg">
       <Text className="text-xl font-bold text-text-primary">
-        erm how does this database thing work brodi
+        HOW DOES THIS WORK BRO :SOB:
       </Text>
       <Link href="/onboarding" className="mt-4 rounded bg-neon-lime py-3.5 text-text-primary">
         Im ill but trust im still learning 
